@@ -16,7 +16,7 @@ if which node > /dev/null
         exit 1
 fi
 
-NODE_MAJOR_VERSION=`node -v | sed -n "s/^v\([0-9]\).*/\1/p"`
+NODE_MAJOR_VERSION=`node -v | sed -n "s/^v\([[:digit:]]*\).*/\1/p"`
 
 if [ $NODE_MAJOR_VERSION -lt 4 ]
     then
